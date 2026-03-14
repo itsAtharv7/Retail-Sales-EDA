@@ -1,16 +1,16 @@
-Retail Analytics: End-to-End Data Engineering & Business Intelligence Dashboard
-This repository contains a comprehensive data analytics project focused on a retail sales dataset. The project covers the full data lifecycle—from handling "messy" raw data and performing advanced Exploratory Data Analysis (EDA) in Python to building an interactive Business Intelligence (BI) dashboard in Power BI.
+Retail Analytics: End-to-End Data Engineering & BI Dashboard
+This repository features a complete data science workflow, transforming "messy" retail transaction data into actionable business intelligence. The project encompasses automated data cleaning, statistical EDA, and an interactive Power BI dashboard.
 
 🚀 Project Overview
-The objective of this project is to transform raw retail transaction data into actionable business insights. By cleaning inconsistent data and applying statistical visualization techniques, we identify key drivers of profitability, sales performance across regions, and customer behavior patterns.
+Retail businesses often struggle with data silos and inconsistent formatting. This project demonstrates a robust pipeline to:
+Sanitize raw CSV data using localized imputation and type-casting.
+Analyze profitability drivers and customer behavior using Python.
+Visualize high-level KPIs and regional performance for executive decision-making.
 
 🛠 Tech Stack
-Data Engineering: Python (Pandas, NumPy)
-
-EDA & Visualization: Matplotlib, Seaborn
-
+Data Processing: Python (Pandas, NumPy)
+Statistical Visualization: Seaborn, Matplotlib
 Business Intelligence: Microsoft Power BI
-
 Environment: Jupyter Notebook / Anaconda
 
 📂 Project Structure
@@ -36,67 +36,43 @@ Retail-Sales-Analysis/
 ├── requirements.txt                 # Project dependencies
 └── README.md
 
-⚙️ Data Pipeline & Workflow
+⚙️ Workflow & Methodology
 
-1. Data Cleaning & Preprocessing (messeyretail.ipynb)
-The raw data was subjected to a rigorous cleaning pipeline to ensure integrity for downstream analysis:
+1. Data Engineering Pipeline
+The cleaning process in messeyretail.ipynb handles common real-world data issues:
+Regional Imputation: Missing Country values were filled using the mode of the specific Region they belonged to, ensuring geographical accuracy.
+Inconsistency Correction: Standardized ShippingMode entries (e.g., converting "EXPRESS" to "Express") and handled "Unknown" string placeholders.
+Schema Validation: Ensured all dates followed a standardized format and numerical columns were cast to appropriate float types for calculation.
 
-Imputation Strategies: Handled missing values in Country and Region using mode-based imputation localized by geographical groups.
+2. Exploratory Data Analysis (EDA)
+Key analytical insights addressed in cleanretaiEDA.ipynb:
+The Discount Impact: Visualizing the inverse relationship between high discount rates and net profit margins using scatter plots and correlation matrices.
+Customer Loyalty: Identifying the "Top 5 High-Frequency Customers" and calculating "Buyer Recency" to track engagement levels.
+Category Analysis: Segmenting sales volume vs. profit margin to identify "loss leaders" versus "cash cows."
 
-Data Type Standardization: Converted date fields into standardized datetime formats and ensured numerical consistency for Sales and Profit.
+📊 Visual Analysis Summary
+The following plots are available in the EDA Plots folder:
+Sales Distribution: A histogram showcasing the spread of transaction values across the dataset.
+Profit vs. Discount: A regression plot highlighting how aggressive discounting impacts the bottom line.
+Category Performance: A bar chart comparing total sales and net profit across different product segments.
 
-Inconsistency Resolution: Replaced "Unknown" placeholders with analytical nulls (NaN) for better statistical handling.
-
-Constraint Validation: Removed duplicate records and filtered out erroneous data points.
-
-2. Exploratory Data Analysis (cleanretaiEDA.ipynb)
-Statistical analysis was performed to uncover hidden trends:
-
-Profitability Drivers: Analyzed the inverse relationship between high discount rates and net profit margins.
-
-Category Performance: Segmented sales and profit by product category (Accessories, Electronics, etc.) to determine top contributors.
-
-Customer Segmentation: Identified top 5 high-frequency customers and tracked recent buyer behavior (recency analysis).
-
-Correlation Matrix: Generated heatmaps to identify strong linear relationships between Quantity, Sales, and Profit.
-
-3. Interactive Power BI Dashboard (retail_dashboard.pbix)
-Developed a multi-dimensional dashboard providing:
-
-Executive Summary KPIs: Total Sales, Total Profit, and Average Discount.
-
-Regional Geospatial Analysis: Performance tracking across different global regions and countries.
-
-Product Deep-Dive: Interactive filters to drill down into specific categories and products.
-
-Shipping Mode Efficiency: Comparison of Standard, Express, and Same Day shipping on cost and delivery volume.
-
-📊 Key Business Insights
-Discount Optimization: Data indicates that aggressive discounting (above a certain threshold) leads to diminishing profit returns, particularly in the Electronics category.
-
-Geographic Focus: The South and East regions show the highest volume of high-margin transactions.
-
-Category Dominance: The Accessories category contributes significantly to the total profit percentage (approx. 50.15% in specific samples).
+📈 Power BI Dashboard
+The interactive dashboard provides a 360-degree view of the business:
+KPI Cards: Real-time tracking of Total Sales, Profit, and Quantity.
+Map Visuals: Regional sales distribution to identify underperforming markets.
+Drill-Downs: Filter by ShippingMode or Category to see specific performance metrics.
 
 🛠 Installation & Usage
-Clone the Repository:
+Clone the Repo:
 
 Bash
 git clone https://github.com/itsAtharv7/Retail-Sales-Analysis.git
-cd Retail-Sales-Analysis
-Install Dependencies:
+Setup Environment:
 
 Bash
 pip install -r requirements.txt
-Run the Analysis:
-
-Execute notebooks/messeyretail.ipynb to regenerate the clean data.
-
-Execute notebooks/cleanretaiEDA.ipynb to view the detailed visualization reports.
-
-View Dashboard:
-
-Open dashboard/retail_dashboard.pbix using Microsoft Power BI Desktop.
+Run Pipeline:
+Execute the notebooks in the notebooks/ folder sequentially to see the data transformation and plot generation.
 
 👤 Author
-Atharv Kathar AI Engineer Intern | Rubixe AI [(https://www.linkedin.com/in/atharv-kathar)] 
+Atharv Kathar AI Engineer Intern at Rubixe AI [https://www.linkedin.com/in/atharv-kathar] 
