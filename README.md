@@ -61,12 +61,13 @@ The interactive dashboard provides a 360-degree view of the business:
 KPI Cards: Real-time tracking of Total Sales, Profit, and Quantity.
 Map Visuals: Regional sales distribution to identify underperforming markets.
 Drill-Downs: Filter by ShippingMode or Category to see specific performance metrics.
+![Dashboard](EDA Plots/Powerbi Dashboard.png)
 
 🛠 Installation & Usage
 Clone the Repo:
 
 Bash
-git clone https://github.com/itsAtharv7/Retail-Sales-Analysis.git
+git clone https://github.com/itsAtharv7/Retail-Sales-EDA.git
 Setup Environment:
 
 Bash
