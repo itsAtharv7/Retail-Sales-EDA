@@ -14,6 +14,7 @@ Business Intelligence: Microsoft Power BI
 Environment: Jupyter Notebook / Anaconda
 
 📂 Project Structure
+```
 Plaintext
 Retail-Sales-Analysis/
 │
@@ -36,6 +37,7 @@ Retail-Sales-Analysis/
 ├── requirements.txt                 # Project dependencies
 └── README.md
 
+```
 ⚙️ Workflow & Methodology
 
 1. Data Engineering Pipeline
