@@ -78,4 +78,4 @@ Run Pipeline:
 Execute the notebooks in the notebooks/ folder sequentially to see the data transformation and plot generation.
 
 👤 Author
-Atharv Kathar AI Engineer Intern at Rubixe AI [https://www.linkedin.com/in/atharv-kathar] 
+Atharv Kathar AI Engineer Intern at Rubixe AI [https://www.linkedin.com/in/atharv-kathar]  
